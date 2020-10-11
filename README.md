@@ -1,5 +1,7 @@
 # SITS
 Summer Internship Project
+
+
 The following repository contains the main.dart file, pubspec.yaml file and the APK file of the completed project. 
 To run/view the given project, do the following steps: 
 1. Create a new Flutter Project.
