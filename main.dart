@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 void main() {
   runApp(MaterialApp(
     home: HomePage(),
@@ -12,10 +14,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text('SynthWave',
-            style: TextStyle(
-                fontFamily: 'Raleway',
-                fontSize: 60.0,
-                color: Color(0xFFffdfbe))),
+            style:
+                GoogleFonts.raleway(fontSize: 60.0, color: Color(0xFFffdfbe))),
         SizedBox(
           height: 90.0,
           child: Divider(
@@ -30,15 +30,15 @@ class HomePage extends StatelessWidget {
             color: Color(0xff1D2D54),
             child: Text(
               'Exit',
-              style: TextStyle(color: Color(0xFFffdfbe)),
+              style: GoogleFonts.raleway(color: Color(0xFFffdfbe)),
             ),
-            onPressed: ()=> Navigator.pop(context),
+            onPressed: () => Navigator.pop(context),
           ),
           SizedBox(width: 40.0),
           RaisedButton(
             color: Color(0xff1D2D54),
-            child:
-            Text('Let\'s Go', style: TextStyle(color: Color(0xFFffdfbe))),
+            child: Text('Let\'s Go',
+                style: GoogleFonts.raleway(color: Color(0xFFffdfbe))),
             onPressed: () {
               Navigator.push(
                 context,
@@ -67,15 +67,14 @@ class SynthWaveApp extends StatelessWidget {
                 onPressed: () => Navigator.pop(context),
               ),
               title: Text('SYNTH WAVE',
-                  style: TextStyle(
-                      color: Color(0xFFffdfbe), fontFamily: 'Raleway')),
+                  style: GoogleFonts.raleway(color: Color(0xFFffdfbe))),
             )),
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text("Glassy-Guitar",
-                  style: TextStyle(
+                  style: GoogleFonts.raleway(
                     fontSize: 15.0,
                     color: Color(0xFFffdfbe),
                   )),
@@ -85,7 +84,7 @@ class SynthWaveApp extends StatelessWidget {
                 Expanded(child: AudioPadButton(3)),
               ]),
               Text("Dope-Drum",
-                  style: TextStyle(
+                  style: GoogleFonts.raleway(
                     fontSize: 15.0,
                     color: Color(0xFFffdfbe),
                   )),
@@ -95,7 +94,7 @@ class SynthWaveApp extends StatelessWidget {
                 Expanded(child: AudioPadButton(6)),
               ]),
               Text("Sane-Snare",
-                  style: TextStyle(
+                  style: GoogleFonts.raleway(
                     fontSize: 15.0,
                     color: Color(0xFFffdfbe),
                   )),
@@ -105,7 +104,7 @@ class SynthWaveApp extends StatelessWidget {
                 Expanded(child: AudioPadButton(9)),
               ]),
               Text("Bossy-Base",
-                  style: TextStyle(
+                  style: GoogleFonts.raleway(
                     fontSize: 15.0,
                     color: Color(0xFFffdfbe),
                   )),
@@ -150,7 +149,7 @@ class AudioPadButton extends StatelessWidget {
         print('Hello$sound');
         final player = AudioCache();
         player.play('$sound.wav');
-        },
+      },
     );
   }
 }
