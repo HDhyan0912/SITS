@@ -1,5 +1,5 @@
-name: Xylophone_App
-description: A new Flutter project.
+name: synthwave
+description: A tune player app
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -9,6 +9,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^0.1.2
   audioplayers: ^0.16.1
+  google_fonts: ^1.1.2
 
 dev_dependencies:
   flutter_test:
